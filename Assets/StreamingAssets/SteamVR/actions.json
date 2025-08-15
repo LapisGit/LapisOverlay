@@ -1,0 +1,25 @@
+{
+   "action_sets" : [
+      {
+         "name" : "/actions/Watch",
+         "usage" : "single"
+      },
+      {
+         "name" : "/actions/NewSet",
+         "usage" : "single"
+      }
+   ],
+   "actions" : [
+      {
+         "name" : "/actions/Watch/in/WakeUp",
+         "type" : "boolean"
+      }
+   ],
+   "default_bindings" : [
+      {
+         "binding_url" : "application_generated_unity_lapisoverlay_exe_binding_oculus_touch.json",
+         "controller_type" : "oculus_touch"
+      }
+   ],
+   "localization" : []
+}
