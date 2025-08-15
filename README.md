@@ -5,4 +5,4 @@ A work-in-progress multi-purpose open-source overlay for SteamVR.
 Press "Y" on your controller to enable/disable the overlay.
 
 
-https://cdn.discordapp.com/attachments/1309281790166433862/1373054633894740133/bloodjman13.gif
+![bloodjman13](https://github.com/user-attachments/assets/b89c6d51-8b41-4ea3-b10c-90aba1ae6e27)
