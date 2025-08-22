@@ -147,5 +147,28 @@ namespace OpenVRUtil
                 throw new Exception("Failed to set overlay transform: " + error);
             }
         }
+        
+        public static (ulong, ulong) CreateDashboardOverlay(string key, string name)
+        {
+            ulong dashboardHandle = 0;
+            ulong thumbnailHandle = 0;
+            var error = OpenVR.Overlay.CreateDashboardOverlay(key, name, ref dashboardHandle, ref thumbnailHandle);
+            if (error != EVROverlayError.None)
+            {
+                throw new Exception("Failed to create dashboard overlay: " + error);
+            }
+            
+            return (dashboardHandle, thumbnailHandle);
+        }
+
+        public static bool IsValidHandle(ulong handle)
+        {
+            return handle != OpenVR.k_ulOverlayHandleInvalid && OpenVR.Overlay != null;
+        }
+        
+        public static bool IsOpenVRReady()
+        {
+            return OpenVR.System != null && OpenVR.Overlay != null;
+        }
     }
 }

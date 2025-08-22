@@ -1,25 +1,30 @@
 {
-   "action_sets" : [
-      {
-         "name" : "/actions/Watch",
-         "usage" : "single"
-      },
-      {
-         "name" : "/actions/NewSet",
-         "usage" : "single"
-      }
-   ],
-   "actions" : [
-      {
-         "name" : "/actions/Watch/in/WakeUp",
-         "type" : "boolean"
-      }
-   ],
-   "default_bindings" : [
-      {
-         "binding_url" : "application_generated_unity_lapisoverlay_exe_binding_oculus_touch.json",
-         "controller_type" : "oculus_touch"
-      }
-   ],
-   "localization" : []
+  "actions": [
+    {
+      "name": "/actions/Watch/in/WakeUp",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Watch/in/UI Click",
+      "type": "boolean",
+      "requirement": "mandatory"
+    }
+  ],
+  "action_sets": [
+    {
+      "name": "/actions/Watch",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/NewSet",
+      "usage": "single"
+    }
+  ],
+  "default_bindings": [
+    {
+      "controller_type": "oculus_touch",
+      "binding_url": "application_generated_unity_lapisoverlay_exe_binding_oculus_touch.json"
+    }
+  ],
+  "localization": []
 }

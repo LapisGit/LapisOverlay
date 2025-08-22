@@ -19,6 +19,8 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_watch_WakeUp;
         
+        private static SteamVR_Action_Boolean p_watch_UI_Click;
+        
         public static SteamVR_Action_Boolean watch_WakeUp
         {
             get
@@ -27,28 +29,41 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Boolean watch_UI_Click
+        {
+            get
+            {
+                return SteamVR_Actions.p_watch_UI_Click.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
         private static void InitializeActionArrays()
         {
             Valve.VR.SteamVR_Input.actions = new Valve.VR.SteamVR_Action[] {
-                    SteamVR_Actions.watch_WakeUp};
+                    SteamVR_Actions.watch_WakeUp,
+                    SteamVR_Actions.watch_UI_Click};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.ISteamVR_Action_In[] {
-                    SteamVR_Actions.watch_WakeUp};
+                    SteamVR_Actions.watch_WakeUp,
+                    SteamVR_Actions.watch_UI_Click};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.ISteamVR_Action_Out[0];
             Valve.VR.SteamVR_Input.actionsVibration = new Valve.VR.SteamVR_Action_Vibration[0];
             Valve.VR.SteamVR_Input.actionsPose = new Valve.VR.SteamVR_Action_Pose[0];
             Valve.VR.SteamVR_Input.actionsBoolean = new Valve.VR.SteamVR_Action_Boolean[] {
-                    SteamVR_Actions.watch_WakeUp};
+                    SteamVR_Actions.watch_WakeUp,
+                    SteamVR_Actions.watch_UI_Click};
             Valve.VR.SteamVR_Input.actionsSingle = new Valve.VR.SteamVR_Action_Single[0];
             Valve.VR.SteamVR_Input.actionsVector2 = new Valve.VR.SteamVR_Action_Vector2[0];
             Valve.VR.SteamVR_Input.actionsVector3 = new Valve.VR.SteamVR_Action_Vector3[0];
             Valve.VR.SteamVR_Input.actionsSkeleton = new Valve.VR.SteamVR_Action_Skeleton[0];
             Valve.VR.SteamVR_Input.actionsNonPoseNonSkeletonIn = new Valve.VR.ISteamVR_Action_In[] {
-                    SteamVR_Actions.watch_WakeUp};
+                    SteamVR_Actions.watch_WakeUp,
+                    SteamVR_Actions.watch_UI_Click};
         }
         
         private static void PreInitActions()
         {
             SteamVR_Actions.p_watch_WakeUp = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/Watch/in/WakeUp")));
+            SteamVR_Actions.p_watch_UI_Click = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/Watch/in/UI Click")));
         }
     }
 }

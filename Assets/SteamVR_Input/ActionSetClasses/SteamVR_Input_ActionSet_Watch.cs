@@ -24,5 +24,13 @@ namespace Valve.VR
                 return SteamVR_Actions.watch_WakeUp;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean UI_Click
+        {
+            get
+            {
+                return SteamVR_Actions.watch_UI_Click;
+            }
+        }
     }
 }
